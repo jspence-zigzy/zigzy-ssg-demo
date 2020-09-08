@@ -8,49 +8,29 @@
   <body>
 
     <!-- Start Header -->
-    <!-- <header class="hdr">
-    <div class="hdr__inner">
-        <h1 class="hdr__title"><a href="/index.html">Zigzy SSG Demo</a></h1>
-        <p class="hdr__sub-title">You never have to work a day in your life if you love what you do.</p>
-        <nav class="hdr__nav">
-            <dl class="hdr__nav-list">
-                <dd class="hdr__nav-list-item" id="navHome">
-                    <a class="hdr__nav-item-anchor" href="/index.html">Home</a>
-                </dd>
-                <dd class="hdr__nav-list-item" id="navAbout">
-                    <a class="hdr__nav-item-anchor" href="/about.html">About</a>
-                </dd>
-                <dd class="hdr__nav-list-item" id="navContact">
-                    <a class="hdr__nav-item-anchor" href="/contact.html">Contact</a>
-                </dd>
-            </dl>
-        </nav>
-    </div>
-</header> -->
-
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <h1>Zigzy Demo</h1>
-      </a>
-  
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end">
-        <div class="navbar-start">
-            <a class="navbar-item" href="/">Home</a>
-            <a class="navbar-item" href="/about.html">About</a>
-            <a class="navbar-item" href="/contact.html">Contact</a>
-          </div>
+    <header class="hdr">
+    <nav class="hdr__navbar navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <h1>Zigzy Demo</h1>
+        </a>
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="headerNavbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-    </div>
-  </nav>
+    
+      <div id="headerNavbar" class="hdr__menu navbar-menu">
+        <div class="navbar-end">
+          <a class="hdr__menu-item navbar-item" id="navHome" href="/">Home</a>
+          <a class="hdr__menu-item navbar-item" id="navAbout" href="/about.html">About</a>
+          <a class="hdr__menu-item navbar-item" id="navContact" href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+</header>
     <!-- End Header //-->
 
     <!-- Start Main -->
@@ -63,14 +43,14 @@
                 </div>
             </div>
         </section>
-        <div class="main__content container">
+        <section class="main__content container">
             <h2 class="title">About</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque nulla eget placerat laoreet. Ut pharetra neque et elit finibus volutpat. Nunc euismod nec tellus ut tincidunt. Etiam varius ac dui vitae tristique. Etiam sodales finibus dolor, in lobortis nisl. Nunc dapibus eget dolor vitae porttitor. Quisque euismod orci eu elit gravida, vel interdum elit gravida. Fusce cursus libero quis enim consequat ultricies. Vivamus vel rhoncus tellus. Ut eleifend arcu nibh, non pretium urna cursus in. Nunc aliquam erat massa, eget consequat magna laoreet et. Maecenas eu erat at nisi blandit auctor quis et metus. Nullam ultricies consectetur purus, et interdum massa convallis pulvinar. Aenean in lacus enim. Aliquam eu urna enim. Nam sed tellus sed nibh bibendum finibus ut sed elit.</p>
             <p>Nunc porta ipsum vel scelerisque euismod. Vestibulum convallis est congue ligula pharetra, quis porta nisl lobortis. Fusce mi nulla, bibendum a sollicitudin vitae, sagittis et massa. Donec augue nulla, feugiat at suscipit tincidunt, aliquam quis turpis. Phasellus venenatis eu eros a blandit. Nullam convallis euismod felis eget vulputate. Curabitur aliquet suscipit urna quis hendrerit. Maecenas viverra nisl sed dui porta, non aliquam massa egestas. Mauris ut odio ultrices, aliquet ante ac, commodo lacus. Curabitur vel consectetur ex. Phasellus ac rhoncus mi. Morbi convallis dapibus nunc ac egestas.</p>
             <p>Pellentesque condimentum elit sed enim interdum, volutpat aliquam ipsum convallis. Nulla luctus iaculis pulvinar. Vestibulum vel augue neque. Pellentesque accumsan ullamcorper purus at tempus. Nam ante lacus, pulvinar sit amet vehicula at, fermentum id lacus. Vivamus nec iaculis nisl, eu malesuada justo. Aliquam rhoncus leo a orci efficitur, eget condimentum dolor suscipit. Nullam pellentesque augue sit amet mauris mattis consectetur. Phasellus quis lacus placerat lorem imperdiet sollicitudin. Fusce sed urna congue, imperdiet justo eget, gravida erat. Nullam vitae neque ut eros malesuada condimentum eget id justo. Praesent faucibus ac ipsum et volutpat. Morbi a libero gravida, sodales nisl ut, laoreet lorem. Nulla facilisi. Vivamus at sapien leo. Ut id convallis lacus.</p>
             <p>Morbi lectus quam, feugiat ac libero quis, accumsan vehicula risus. In vitae elementum tellus, sed faucibus leo. Mauris vulputate nulla at leo cursus, vitae dapibus urna venenatis. Integer ut blandit ex, ac consequat metus. Curabitur maximus sollicitudin ullamcorper. Suspendisse tristique lorem at tempor tempor. Donec molestie massa non elit laoreet volutpat. Mauris mattis a arcu eu tincidunt. Duis vitae velit a orci gravida faucibus a viverra urna. Vestibulum placerat tortor id bibendum scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus lacus efficitur, gravida est quis, mollis ipsum. Integer quis mollis orci, malesuada consequat ligula. Aliquam nec nisl lorem. Pellentesque pellentesque semper ligula, nec venenatis lectus elementum ut.</p>
             <p>Nunc pharetra efficitur est quis laoreet. Vivamus id lectus a nunc sagittis consequat. Donec scelerisque accumsan nunc, quis vulputate tellus ultrices in. Vestibulum vitae lorem aliquam, mollis tortor eget, feugiat felis. Nullam vitae sapien eros. Suspendisse vitae cursus nisl. Donec nibh diam, luctus at imperdiet sed, ornare et sapien. Ut nec magna a odio finibus ultrices. Etiam vel elementum leo. Morbi eu neque luctus, mollis nisl id, pulvinar felis. Nulla ligula ante, aliquam ut nunc ac, sodales laoreet odio. Aenean et dui volutpat, suscipit felis nec, condimentum erat. Donec euismod leo nec dui laoreet, ut tempus quam fermentum. Nulla facilisi. Vestibulum eget orci dolor.</p>
-        </div>
+        </section>
     </main>
     <!-- End Main //-->
 
