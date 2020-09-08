@@ -1,17 +1,14 @@
-@import "variables/media";
+@charset "utf-8";
+@import "~bulma/bulma";
+@import './base/imports';
 
-@import "mixin/media";
+/* Global Styles */
+.main {
+    // .main__content
+    &__content {
+        padding: 1rem;
+    }
+}
 
-@import "util/grid";
-
-@import "lib/normalize";
-
-@import "modifier/margin";
-
-@import 'base/base';
-@import 'base/fonts';
-
-@import 'module/cat';
-
-
-
+/* Cat Module */
+@import './module/cat';

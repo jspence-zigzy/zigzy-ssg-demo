@@ -1,0 +1,24 @@
+//
+// Global Header
+// ------------------------------ //
+.hdr {
+    display: flex;
+    flex-grow: 1;
+
+    // .hdr__navbar
+    &__navbar {
+        flex-grow: 1;
+    }
+
+    // .hdr__menu
+    &__menu-item {
+        // .hdr__menu--is-active
+        &--is-active {
+            background-color: #ddd;
+
+            &:hover {
+                background-color: #ddd !important;
+            }
+        }
+    }
+}

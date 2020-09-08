@@ -1,0 +1,27 @@
+//
+// Global Footer
+// ------------------------------ //
+.ftr {
+    display: flex;
+    
+    // .ftr__inner
+    &__inner {
+        flex-grow: 1;
+        padding: 1rem;
+    }
+
+    // .ftr__text-group
+    &__text-group {
+        text-align: center;
+    }
+
+    // .ftr__title
+    &__title {
+        margin: 0;
+    }
+
+    // .ftr__legal-content
+    &__legal-content {
+        margin: 0;
+    }
+}
