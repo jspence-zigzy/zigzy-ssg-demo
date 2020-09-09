@@ -1,0 +1,17 @@
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    // .contact__content
+    &__content {
+        flex-grow: 1;
+        padding: 1rem;
+    }
+
+    // .contact__title
+    &__title {
+        text-transform: uppercase;
+    }
+}

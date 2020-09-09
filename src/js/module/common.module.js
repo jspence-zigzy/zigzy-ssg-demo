@@ -35,9 +35,25 @@ const commonModule = (function () {
         });
     };
 
+    const hasVerticalScrollbar = () => {
+        const mainEle = document.querySelector('#main');
+
+        if (window.innerHeight) {
+            return document.body.offsetHeight > window.innerHeight;
+        }
+
+        return (document.documentElement.scrollHeight > document.documentElement.offsetHeight)
+            || (document.body.scrollHeight > document.body.offsetHeight);
+    };
+
     return {
-        setActiveNavItem
+        setActiveNavItem,
+        hasVerticalScrollbar
     };
 })();
 
 commonModule.setActiveNavItem();
+
+setTimeout(() => {
+    commonModule.hasVerticalScrollbar();
+}, 30);

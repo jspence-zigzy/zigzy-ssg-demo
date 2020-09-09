@@ -1,0 +1,51 @@
+
+.home {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    // .home--auto-height
+    &--auto-height {
+        height: 100%;
+    }
+
+    // .home__content
+    &__content {
+        flex-grow: 1;
+        padding: 1rem;
+    }
+
+    // .home__title
+    &__title {
+        text-transform: uppercase;
+    }
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    background-color: $grey-10;
+    height: calc(100vh - 60%);
+    padding: 1rem 0;
+
+    // .hero__content
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-grow: 1;
+        padding: 1rem;
+    }
+
+    // .hero__title
+    &__title {
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    // .hero__subtitle
+    &__subtitle {
+        margin: 0;
+    }
+}

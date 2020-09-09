@@ -1,11 +1,11 @@
 /* Basic */
-@import "../variables/media.scss";
+@import "../variables/media";
+@import "../variables/colors";
 @import "../mixin/media";
 @import "../util/grid";
 @import "../lib/normalize";
 @import "../modifier/margin";
 @import '../base/base';
-@import '../base/fonts';
 
 /* Global Header & Footer */
 @import './header';

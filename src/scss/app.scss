@@ -1,6 +1,8 @@
 @charset "utf-8";
-@import "~bulma/bulma";
 @import './base/imports';
+@import './module/about';
+@import './module/home';
+@import './module/contact';
 
 /* Global Styles */
 .main {
@@ -9,6 +11,3 @@
         padding: 1rem;
     }
 }
-
-/* Cat Module */
-@import './module/cat';

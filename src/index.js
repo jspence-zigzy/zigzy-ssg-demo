@@ -1,1 +1,0 @@
-require('./scss/lib/import-bulma.scss');
