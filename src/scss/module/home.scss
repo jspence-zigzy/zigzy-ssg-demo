@@ -2,7 +2,7 @@
 .home {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 
     // .home--auto-height
     &--auto-height {
@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     background-color: $grey-10;
-    height: calc(100vh - 60%);
+    height: 22rem;
     padding: 1rem 0;
 
     // .hero__content
@@ -47,5 +47,6 @@
     // .hero__subtitle
     &__subtitle {
         margin: 0;
+        text-align: center;
     }
 }
