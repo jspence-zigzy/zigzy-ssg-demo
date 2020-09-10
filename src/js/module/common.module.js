@@ -65,4 +65,4 @@ setTimeout(() => {
     if (!hasScroll) {
         commonModule.setMainCssClass();
     }
-}, 30);
+}, 0);
