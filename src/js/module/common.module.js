@@ -36,8 +36,6 @@ const commonModule = (function () {
     };
 
     const hasVerticalScrollbar = () => {
-        const mainEle = document.querySelector('#main');
-
         if (window.innerHeight) {
             return document.body.offsetHeight > window.innerHeight;
         }
@@ -46,14 +44,25 @@ const commonModule = (function () {
             || (document.body.scrollHeight > document.body.offsetHeight);
     };
 
+    const setMainCssClass = () => {
+        const mainEle = document.querySelector('#main');
+        const mainEleCssClass = mainEle.className;
+        const mainEleCssClassModifier = `${mainEleCssClass}--auto-height`;
+        mainEle.classList.add(mainEleCssClassModifier);
+    };
+
     return {
         setActiveNavItem,
-        hasVerticalScrollbar
+        hasVerticalScrollbar,
+        setMainCssClass
     };
 })();
 
 commonModule.setActiveNavItem();
 
 setTimeout(() => {
-    commonModule.hasVerticalScrollbar();
+    const hasScroll = commonModule.hasVerticalScrollbar();
+    if (!hasScroll) {
+        commonModule.setMainCssClass();
+    }
 }, 30);

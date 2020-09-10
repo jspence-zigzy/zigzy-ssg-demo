@@ -3,11 +3,17 @@
 // ------------------------------ //
 .ftr {
     display: flex;
+    background-color: $grey-10;
     
-    // .ftr__inner
-    &__inner {
+    // .ftr__content
+    &__content {
         flex-grow: 1;
         padding: 1rem;
+    }
+
+    // .ftr__column
+    &__column {
+        margin-bottom: 0;
     }
 
     // .ftr__text-group

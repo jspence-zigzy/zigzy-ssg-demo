@@ -2,7 +2,12 @@
 .contact {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+
+    // .contact--auto-height
+    &--auto-height {
+        height: 100vh;
+    }
 
     // .contact__content
     &__content {

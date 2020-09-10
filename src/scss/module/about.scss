@@ -2,7 +2,12 @@
 .about {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+
+    // .about--auto-height
+    &--auto-height {
+        height: 100vh;
+    }
 
     // .about__content
     &__content {
