@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zigzy Demo | Contact</title>
-    <meta name="description" content="Contact Zigzy today to see how we can help you generate more business." />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-  <link href="./assets/css/styles.css" rel="stylesheet"></head>
-  <body>
 
-    <!-- Start Header -->
-    <header class="hdr hdr--blue">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zigzy Demo | Contact</title>
+  <meta name="description" content="Contact Zigzy today to see how we can help you generate more business." />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+<link href="./assets/css/styles.css" rel="stylesheet"></head>
+
+<body>
+
+  <!-- Start Header -->
+  <header class="hdr hdr--blue">
   <nav class="hdr__navbar grid-row">
     
     <!-- Left Column -->
@@ -33,23 +35,63 @@
 
   </nav>
 </header>
-    <!-- End Header //-->
+  <!-- End Header //-->
 
-    <!-- Start Main -->
-    <main class="contact" id="main">
-      <section class="contact__content">
-          <h2 class="contact__title">Contact</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque nulla eget placerat laoreet. Ut pharetra neque et elit finibus volutpat. Nunc euismod nec tellus ut tincidunt. Etiam varius ac dui vitae tristique. Etiam sodales finibus dolor, in lobortis nisl. Nunc dapibus eget dolor vitae porttitor. Quisque euismod orci eu elit gravida, vel interdum elit gravida. Fusce cursus libero quis enim consequat ultricies. Vivamus vel rhoncus tellus. Ut eleifend arcu nibh, non pretium urna cursus in. Nunc aliquam erat massa, eget consequat magna laoreet et. Maecenas eu erat at nisi blandit auctor quis et metus. Nullam ultricies consectetur purus, et interdum massa convallis pulvinar. Aenean in lacus enim. Aliquam eu urna enim. Nam sed tellus sed nibh bibendum finibus ut sed elit.</p>
-          <p>Nunc porta ipsum vel scelerisque euismod. Vestibulum convallis est congue ligula pharetra, quis porta nisl lobortis. Fusce mi nulla, bibendum a sollicitudin vitae, sagittis et massa. Donec augue nulla, feugiat at suscipit tincidunt, aliquam quis turpis. Phasellus venenatis eu eros a blandit. Nullam convallis euismod felis eget vulputate. Curabitur aliquet suscipit urna quis hendrerit. Maecenas viverra nisl sed dui porta, non aliquam massa egestas. Mauris ut odio ultrices, aliquet ante ac, commodo lacus. Curabitur vel consectetur ex. Phasellus ac rhoncus mi. Morbi convallis dapibus nunc ac egestas.</p>
-          <p>Pellentesque condimentum elit sed enim interdum, volutpat aliquam ipsum convallis. Nulla luctus iaculis pulvinar. Vestibulum vel augue neque. Pellentesque accumsan ullamcorper purus at tempus. Nam ante lacus, pulvinar sit amet vehicula at, fermentum id lacus. Vivamus nec iaculis nisl, eu malesuada justo. Aliquam rhoncus leo a orci efficitur, eget condimentum dolor suscipit. Nullam pellentesque augue sit amet mauris mattis consectetur. Phasellus quis lacus placerat lorem imperdiet sollicitudin. Fusce sed urna congue, imperdiet justo eget, gravida erat. Nullam vitae neque ut eros malesuada condimentum eget id justo. Praesent faucibus ac ipsum et volutpat. Morbi a libero gravida, sodales nisl ut, laoreet lorem. Nulla facilisi. Vivamus at sapien leo. Ut id convallis lacus.</p>
-          <p>Morbi lectus quam, feugiat ac libero quis, accumsan vehicula risus. In vitae elementum tellus, sed faucibus leo. Mauris vulputate nulla at leo cursus, vitae dapibus urna venenatis. Integer ut blandit ex, ac consequat metus. Curabitur maximus sollicitudin ullamcorper. Suspendisse tristique lorem at tempor tempor. Donec molestie massa non elit laoreet volutpat. Mauris mattis a arcu eu tincidunt. Duis vitae velit a orci gravida faucibus a viverra urna. Vestibulum placerat tortor id bibendum scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus lacus efficitur, gravida est quis, mollis ipsum. Integer quis mollis orci, malesuada consequat ligula. Aliquam nec nisl lorem. Pellentesque pellentesque semper ligula, nec venenatis lectus elementum ut.</p>
-          <p>Nunc pharetra efficitur est quis laoreet. Vivamus id lectus a nunc sagittis consequat. Donec scelerisque accumsan nunc, quis vulputate tellus ultrices in. Vestibulum vitae lorem aliquam, mollis tortor eget, feugiat felis. Nullam vitae sapien eros. Suspendisse vitae cursus nisl. Donec nibh diam, luctus at imperdiet sed, ornare et sapien. Ut nec magna a odio finibus ultrices. Etiam vel elementum leo. Morbi eu neque luctus, mollis nisl id, pulvinar felis. Nulla ligula ante, aliquam ut nunc ac, sodales laoreet odio. Aenean et dui volutpat, suscipit felis nec, condimentum erat. Donec euismod leo nec dui laoreet, ut tempus quam fermentum. Nulla facilisi. Vestibulum eget orci dolor.</p>
-      </section>
+  <!-- Start Main -->
+  <main class="contact" id="main">
+    <section class="contact__content">
+      <h2 class="contact__title">Contact US</h2>
+      <p>Use the form below to contact us. We'll get back to you as soon as possible.</p>
+      <form class="contact-form" name="contactForm" action="contactFormAction" method="post" novalidate>
+        <fieldset class="contact-form__fieldset">
+          <div class="contact-form__row grid-row">
+            <div class="contact-form__col grid-col-xs--12 grid-col--6">
+              <div class="form-field">
+                <label class="form-field__label" for="firstName">First Name</label>
+                <input class="form-field__input" type="text" name="firstName" id="firstName" required />
+              </div>
+            </div>
+            <div class="contact-form__col grid-col-xs--12 grid-col--6">
+              <div class="form-field">
+                <label class="form-field__label" for="lastName">Last Name</label>
+                <input class="form-field__input" type="text" name="lastName" id="lastName" required />
+              </div>
+            </div>
+          </div>
+          <div class="contact-form__row grid-row">
+            <div class="contact-form__col grid-col-xs--12 grid-col--6">
+              <div class="form-field">
+                <label class="form-field__label" for="emailAddress">Email Address</label>
+                <input class="form-field__input" type="text" name="emailAddress" id="emailAddress" required />
+              </div>
+            </div>
+            <div class="contact-form__col grid-col-xs--12 grid-col--6">
+              <div class="form-field">
+                <label class="form-field__label" for="phoneNumber">Phone Number</label>
+                <input class="form-field__input" type="text" name="phoneNumber" id="phoneNumber" required />
+              </div>
+            </div>
+          </div>
+          <div class="contact-form__row grid-row">
+            <div class="contact-form__col grid-col--12">
+              <div class="form-field">
+                <textarea class="form-field__textarea"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form__row grid-row">
+            <div class="contact-form__col grid-col--3 grid-col-xs--12">
+              <button class="contact-form__btn-submit" type="submit">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
   </main>
   <!-- End Main //-->
 
-    <!-- Start Footer -->
-    <footer class="ftr">
+  <!-- Start Footer -->
+  <footer class="ftr">
     <div class="ftr__content">
         <div class="ftr__row grid-row">
             <div class="ftr__column grid-col--12">
@@ -61,7 +103,8 @@
         </div>
     </div>
 </footer>
-    <!-- End Footer //-->
+  <!-- End Footer //-->
 
-  <script type="text/javascript" src="./assets/js/bundle.js"></script></body>
+<script type="text/javascript" src="./assets/js/bundle.js"></script></body>
+
 </html>

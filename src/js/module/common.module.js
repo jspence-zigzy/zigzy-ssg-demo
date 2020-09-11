@@ -1,19 +1,19 @@
 /**
- * Common Module
+ * Common Class
  */
-const commonModule = (function () {
-    const getPageName = (pageUrl) => {
+class Common {
+    getPageName(pageUrl) {
         const pagePath = pageUrl.substr(0, pageUrl.lastIndexOf('.')) || pageUrl;
         return pagePath.replace(/^\/|\/$/g, '');
-    };
+    }
 
-    const getPageUrl = () => {
+    getPageUrl = () => {
         const pathName = window.location.pathname;
-        return getPageName(pathName);
-    };
+        return this.getPageName(pathName);
+    }
 
-    const setActiveNavItem = () => {
-        const pageName = getPageUrl();
+    setActiveNavItem = () => {
+        const pageName = this.getPageUrl();
         const navItemCssClass = 'hdr__menu-item';
         const navItemCssActiveClass = 'hdr__menu-item--is-active';
         const navList = document.querySelectorAll(`.${navItemCssClass}`);
@@ -33,36 +33,37 @@ const commonModule = (function () {
                     break;
             }
         });
-    };
+    }
 
-    const hasVerticalScrollbar = () => {
+    hasVerticalScrollbar = () => {
         if (window.innerHeight) {
             return document.body.offsetHeight > window.innerHeight;
         }
 
         return (document.documentElement.scrollHeight > document.documentElement.offsetHeight)
             || (document.body.scrollHeight > document.body.offsetHeight);
-    };
+    }
 
-    const setMainCssClass = () => {
+    setMainCssClass = () => {
         const mainEle = document.querySelector('#main');
         const mainEleCssClass = mainEle.className;
         const mainEleCssClassModifier = `${mainEleCssClass}--auto-height`;
         mainEle.classList.add(mainEleCssClassModifier);
-    };
+    }
 
-    return {
-        setActiveNavItem,
-        hasVerticalScrollbar,
-        setMainCssClass
-    };
-})();
+    submitContactForm = (form) => {
+        form.preventDefault();
+        console.log('Form Data: ', form);
+    }
+}
 
-commonModule.setActiveNavItem();
+let common = new Common();
+
+common.setActiveNavItem();
 
 setTimeout(() => {
-    const hasScroll = commonModule.hasVerticalScrollbar();
+    const hasScroll = common.hasVerticalScrollbar();
     if (!hasScroll) {
-        commonModule.setMainCssClass();
+        common.setMainCssClass();
     }
 }, 0);
