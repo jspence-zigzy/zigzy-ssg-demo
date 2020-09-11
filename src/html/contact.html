@@ -20,19 +20,19 @@
     <section class="contact__content">
       <h2 class="contact__title">Contact US</h2>
       <p>Use the form below to contact us. We'll get back to you as soon as possible.</p>
-      <form class="contact-form" name="contactForm" action="contactFormAction" method="post" novalidate>
+      <form class="contact-form" name="contactForm" id="contactForm">
         <fieldset class="contact-form__fieldset">
           <div class="contact-form__row grid-row">
             <div class="contact-form__col grid-col-xs--12 grid-col--6">
               <div class="form-field">
                 <label class="form-field__label" for="firstName">First Name</label>
-                <input class="form-field__input" type="text" name="firstName" id="firstName" required />
+                <input class="form-field__input" type="text" name="firstName" id="firstName" maxlength="30" oninput="validateFormField(this)" required />
               </div>
             </div>
             <div class="contact-form__col grid-col-xs--12 grid-col--6">
               <div class="form-field">
                 <label class="form-field__label" for="lastName">Last Name</label>
-                <input class="form-field__input" type="text" name="lastName" id="lastName" required />
+                <input class="form-field__input" type="text" name="lastName" id="lastName" maxlength="30" oninput="validateFormField(this)" required />
               </div>
             </div>
           </div>
@@ -40,26 +40,34 @@
             <div class="contact-form__col grid-col-xs--12 grid-col--6">
               <div class="form-field">
                 <label class="form-field__label" for="emailAddress">Email Address</label>
-                <input class="form-field__input" type="text" name="emailAddress" id="emailAddress" required />
+                <input class="form-field__input" type="text" name="emailAddress" id="emailAddress" maxlength="50" oninput="validateFormField(this)" required />
               </div>
             </div>
             <div class="contact-form__col grid-col-xs--12 grid-col--6">
               <div class="form-field">
                 <label class="form-field__label" for="phoneNumber">Phone Number</label>
-                <input class="form-field__input" type="text" name="phoneNumber" id="phoneNumber" required />
+                <input class="form-field__input" type="text" name="phoneNumber" id="phoneNumber" maxlength="13" oninput="validateFormField(this)" required />
               </div>
             </div>
           </div>
           <div class="contact-form__row grid-row">
             <div class="contact-form__col grid-col--12">
               <div class="form-field">
-                <textarea class="form-field__textarea"></textarea>
+                <textarea class="form-field__textarea" name="comments" id="comments"></textarea>
               </div>
             </div>
           </div>
           <div class="contact-form__row grid-row">
             <div class="contact-form__col grid-col--3 grid-col-xs--12">
-              <button class="contact-form__btn-submit" type="submit">Submit</button>
+              <button class="contact-form__btn-submit" type="button" onclick="submitContactForm()">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="contact-form__fieldset-confirm">
+          <div class="contact-form__row grid-row">
+            <div class="contact-form__col grid-col--12">
+              <h2>Thank You For Your Submission</h2>
+              <p>We'll get in contact with you as soon as possible.</p>
             </div>
           </div>
         </fieldset>

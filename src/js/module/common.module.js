@@ -51,13 +51,22 @@ class Common {
         mainEle.classList.add(mainEleCssClassModifier);
     }
 
+    validateFormField = (field) => {
+        const fieldValue = field.value;
+        const parentEle = field.parentElement;
+        if (fieldValue.length) {
+            parentEle.classList.remove('form-field--has-error');
+        } else {
+            parentEle.classList.add('form-field--has-error');
+        }
+    }
+
     submitContactForm = (form) => {
-        form.preventDefault();
-        console.log('Form Data: ', form);
+        console.log('Data: ', form);
     }
 }
 
-let common = new Common();
+const common = new Common();
 
 common.setActiveNavItem();
 
@@ -67,3 +76,45 @@ setTimeout(() => {
         common.setMainCssClass();
     }
 }, 0);
+
+submitContactForm = () => {
+    let errorArray = [];
+    const firstName = document.querySelector('#firstName');
+    const lastName = document.querySelector('#lastName');
+    const emailAddress = document.querySelector('#emailAddress');
+    const phoneNumber = document.querySelector('#phoneNumber');
+    const comments = document.querySelector('#comments');
+    const requiredFormFieldArray = [
+        firstName,
+        lastName,
+        emailAddress,
+        phoneNumber
+    ];
+
+    requiredFormFieldArray.forEach((item) => {
+        if (!item.checkValidity()) {
+            errorArray.push(item.id);
+            item.parentElement.classList.add('form-field--has-error');
+        } else {
+            item.parentElement.classList.remove('form-field--has-error');
+        }
+    });
+
+    if (!errorArray.length) {
+        common.submitContactForm({
+            firstName: firstName.value,
+            lastName: lastName.value,
+            email: emailAddress.value,
+            phone: phoneNumber.value,
+            comments: comments.value
+        });
+    } else {
+        setTimeout(() => {
+            alert('Please Fix Form Errors');
+        }, 0);
+    }
+};
+
+validateFormField = (ele) => {
+    common.validateFormField(ele);
+};
